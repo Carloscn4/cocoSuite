@@ -13,10 +13,25 @@ const routes = [
                 next ({ name: 'dashboard' });
             }
         } */
-    },
+    },{
+        // LandinPage
+        path: '/',
+        name: 'landing',
+        component: () => import('./views/landing/LandingPage.vue'),
+    }
 ];
 
 export const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition){
+        if (savedPosition) {
+            return savedPosition;
+        } else if(to.hash) {
+            const navbarHeight = 80;
+            return{el:to.hash, top: navbarHeight, behavior: 'smooth'};
+        }else {
+            return { top: 0, behavior: 'smooth' };
+        }
+    }
 });
