@@ -5,11 +5,16 @@ import ui from '@nuxt/ui/vue-plugin';
 import { createPersistedState } from 'pinia-plugin-persistedstate';
 import { router } from './router';
 import { createPinia } from 'pinia';
+import { PATH_API } from './constants';
+import axios from 'axios';
+
+
+axios.defaults.baseURL = PATH_API;
 
 const pinia = createPinia();
 pinia.use(createPersistedState);
 
-const app = createApp(app);
+const app = createApp(App);
 
 /* router.beforeEach((to, from, next) => {
     if (to.matched.some((record) => record.meta.requiresAuth)) {
@@ -35,7 +40,7 @@ const app = createApp(app);
     }
 }); */
 
-app.config.globalProperties.$functionProperty= functionName;
+//app.config.globalProperties.$functionProperty= functionName;
 
 app.use(pinia);
 app.use(router);

@@ -1,11 +1,18 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     {
-        /* Dashboard */
-        path: '',
-        name: '',
-        components: () => import(''),
+        /* Login */
+        path: '/login',
+        name: 'login',
+        component: () => import('./views/LoginView.vue'),
+        /* beforeEnter: (to, from, next) => {
+            if (!store().loggedIn) {
+                next();
+            } else {
+                next ({ name: 'dashboard' });
+            }
+        } */
     },
 ];
 

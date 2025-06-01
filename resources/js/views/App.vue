@@ -1,10 +1,13 @@
 <template>
-    <div>
-        
-    </div>
+    <UApp>
+        <UMain>
+            <RouterView />
+        </UMain>
+    </UApp>
 </template>
 <script>
+
 export default {
-    
-}
+    //
+};
 </script>

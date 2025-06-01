@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
-import ui from '@nuxt/ui/vite';
+import uiPro from '@nuxt/ui-pro/vite';
 
 export default defineConfig({
     plugins: [
@@ -19,7 +19,7 @@ export default defineConfig({
                 },
             },
         }),
-        ui({
+        uiPro({
             ui: {
                 colors: {
                     primary: 'teal',
@@ -43,7 +43,7 @@ export default defineConfig({
         host: '127.0.0.1',
         port: 5173,
         cors: {
-            origin: 'http://127.0.0.1',
+            origin: 'http://127.0.0.1:8000',
             methods: ['GET', 'POST', 'PUT', 'DELETE'],
             allowedHeaders: ['Content-Type'],
         },
