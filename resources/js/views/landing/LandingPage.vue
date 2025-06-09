@@ -2,7 +2,7 @@
     <div>
         <Hero />
         <Features />
-        <!-- <DashboardPreview /> -->
+        <DashboardPreview />
         <Benefits />
         <Pricing />
         <CTA />
@@ -12,12 +12,11 @@
 <script>
 import Benefits from "./Benefits.vue";
 import CTA from "./CTA.vue";
-// import DashboardPreview from "./DashboardPreview.vue";
+import DashboardPreview from "./DashboardPreview.vue";
 import Features from "./Features.vue";
 import Footer from "./Footer.vue";
 import Hero from "./Hero.vue";
 import Pricing from "./Pricing.vue";
-import CTA from "./CTA.vue";
 
 export default {
     components: {
