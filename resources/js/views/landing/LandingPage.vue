@@ -3,20 +3,24 @@
         <Hero />
         <Features />
         <DashboardPreview />
+        <Benefits />
+        <Pricing />>
     </div>
 </template>
 <script>
-import DashboardPreview from './DashboardPreview.vue';
-import Features from './Features.vue';
-import Hero from './Hero.vue'
+import Benefits from "./Benefits.vue";
+import DashboardPreview from "./DashboardPreview.vue";
+import Features from "./Features.vue";
+import Hero from "./Hero.vue";
+import Pricing from "./Pricing.vue";
 export default {
     components: {
         Hero,
         Features,
-        DashboardPreview
+        DashboardPreview,
+        Benefits,
+        Pricing,
     },
-}
+};
 </script>
-<style lang="">
-    
-</style>
+<style lang=""></style>
