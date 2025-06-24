@@ -1,4 +1,4 @@
-<template lang="">
+<template >
     <section id="pricing" class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -24,7 +24,9 @@
                     :button="{
                         label: 'Choose Plan',
                         color: plan.popular ? 'primary' : 'neutral',
-                        variant: plan.popular ? 'solid' : 'soft',
+                        variant: plan.popular ? 'solid' : 'outline',
+                        class:'cursor-pointer'
+                        
                     }"
                     :highlight="plan.popular"
                     :badge="plan.popular ? 'Popular' : ''"

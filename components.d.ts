@@ -12,6 +12,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UAuthForm: typeof import('./node_modules/@nuxt/ui-pro/dist/runtime/components/AuthForm.vue')['default']
+    UAvatar: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Avatar.vue')['default']
     UBadge: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Badge.vue')['default']
     UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCheckbox: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Checkbox.vue')['default']
@@ -34,9 +35,11 @@ declare module 'vue' {
     UPageGrid: typeof import('./node_modules/@nuxt/ui-pro/dist/runtime/components/PageGrid.vue')['default']
     UPageSection: typeof import('./node_modules/@nuxt/ui-pro/dist/runtime/components/PageSection.vue')['default']
     UPinInput: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/PinInput.vue')['default']
+    UPopover: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Popover.vue')['default']
     UPricingPlan: typeof import('./node_modules/@nuxt/ui-pro/dist/runtime/components/PricingPlan.vue')['default']
     USelectMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/SelectMenu.vue')['default']
     USeparator: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Separator.vue')['default']
     UTooltip: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Tooltip.vue')['default']
+    UUser: typeof import('./node_modules/@nuxt/ui-pro/dist/runtime/components/User.vue')['default']
   }
 }
