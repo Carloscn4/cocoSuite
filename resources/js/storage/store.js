@@ -1,14 +1,17 @@
-import { defineStore } from 'pinia';
-import { INITIAL_STATE } from '../constants';
-import axios from 'axios';
+import { defineStore } from "pinia";
+import { INITIAL_STATE } from "../constants";
+import axios from "axios";
 
-export const store = defineStore('Name', {
+export const store = defineStore("Name", {
     state: () => ({
-        ...INITIAL_STATE,  
+        ...INITIAL_STATE,
     }),
     getters: {
         userId(state) {
             return state.user?.id ?? -1;
+        },
+        isLoggedIn(state) {
+            return !!state.user && !!state.user.id;
         },
     },
     actions: {
@@ -26,14 +29,14 @@ export const store = defineStore('Name', {
         },
         async retrieveToken(credentials) {
             try {
-                const { data } = await axios.post('login', {
+                const { data } = await axios.post("login", {
                     username: credentials.username,
                     password: credentials.password,
                 });
                 this.setRetrieveToken(data.access_token);
 
                 axios.defaults.headers.common[
-                    'Authorization'
+                    "Authorization"
                 ] = `Bearer ${data.access_token}`;
 
                 return { errorToken: null };
@@ -43,7 +46,7 @@ export const store = defineStore('Name', {
         },
         async retrieveUserData() {
             try {
-                const { data } = await axios.get('user');
+                const { data } = await axios.get("user");
                 this.setRetrieveUserData(data.user);
 
                 return { userData: data.user, userError: null };
@@ -55,9 +58,9 @@ export const store = defineStore('Name', {
             if (this.loggedIn) {
                 return new Promise((resolve, reject) => {
                     axios
-                        .post('/logout', '', {
+                        .post("/logout", "", {
                             headers: {
-                                Authorization: 'Bearer ' + this.token,
+                                Authorization: "Bearer " + this.token,
                             },
                         })
                         .then((response) => {
